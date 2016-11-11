@@ -10,7 +10,4 @@ before_build:
 build_script:
   - mvn clean install -P 'guice'
 
-cache:
-  - '%HOMEPATH%\.m2' 
-
-build: off
+# build: off
