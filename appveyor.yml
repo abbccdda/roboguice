@@ -1,13 +1,13 @@
+version: '{build}'
+os: Visual Studio 2015
+
 environment:
   ANDROID_HOME: C:\Program Files (x86)\Android\android-sdk
 
 before_build:
  - cmd: echo y | "%ANDROID_HOME%\tools\android.bat" --silent update sdk --no-ui --all --filter android-19
 
-install:
-  - cmd: java -version
-
-test_script:
+build_script:
   - mvn clean install -P 'guice'
 
 cache:
