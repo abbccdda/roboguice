@@ -1,3 +1,9 @@
+environment:
+  ANDROID_HOME: C:\Program Files (x86)\Android\android-sdk
+
+before_build:
+ - cmd: echo y | "%ANDROID_HOME%\tools\android.bat" --silent update sdk --no-ui --all --filter android-19
+
 install:
   - cmd: java -version
 
